@@ -1,11 +1,15 @@
-import { HelloWorld } from "../src/components/HelloWorld";
-import "../public/css/styles.css";
+import { CarList } from "../src/components/carList";
 import React from "react";
+import { StyleProvider, ThemePicker } from "vcc-ui";
 
 function HomePage() {
   return (
     <React.StrictMode>
-      <HelloWorld />
+      <StyleProvider>
+        <ThemePicker variant="light">
+          <CarList />
+        </ThemePicker>
+      </StyleProvider>
     </React.StrictMode>
   );
 }

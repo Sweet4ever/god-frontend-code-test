@@ -259,7 +259,7 @@
     "core-js-pure" "^3.16.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.9":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.0", "@babel/runtime@^7.18.9":
   "integrity" "sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.18.9.tgz"
   "version" "7.18.9"
@@ -599,6 +599,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@juggle/resize-observer@^3.3.1":
+  "integrity" "sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA=="
+  "resolved" "https://registry.npmjs.org/@juggle/resize-observer/-/resize-observer-3.4.0.tgz"
+  "version" "3.4.0"
+
 "@next/env@12.2.5":
   "integrity" "sha512-vLPLV3cpPGjUPT3PjgRj7e3nio9t6USkuew3JE/jMeon/9Mvp1WyR18v3iwnCuX7eUAm1HmAbJHHLAbcu/EJcw=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-12.2.5.tgz"
@@ -774,7 +779,14 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.4.tgz"
   "version" "15.7.4"
 
-"@types/react@^17.0.0":
+"@types/react-dom@^18.0.6":
+  "integrity" "sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA=="
+  "resolved" "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.6.tgz"
+  "version" "18.0.6"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^17.0.0", "@types/react@>= 16.3.0":
   "integrity" "sha512-zJ6IYlJ8cYYxiJfUaZOQee4lh99mFihBoqkOSEGV+dFi9leROW6+PgstzQ+w3gWTnUfskALtQPGHK6dYmPj+2A=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.48.tgz"
   "version" "17.0.48"
@@ -855,6 +867,39 @@
   dependencies:
     "@typescript-eslint/types" "5.33.1"
     "eslint-visitor-keys" "^3.3.0"
+
+"@volvo-cars/react-aria@^0.3.0":
+  "integrity" "sha512-Wmrk/Pjw/tUwYfzlrm2etxJBezAJb09OfpjtJPJyIHYofa7/scKnHY/9rQMyHy/sva/FDgkwQoaNnRtHwUQ+Hw=="
+  "resolved" "https://registry.npmjs.org/@volvo-cars/react-aria/-/react-aria-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "@volvo-cars/react-descendants" "^0.5.0"
+
+"@volvo-cars/react-descendants@^0.5.0":
+  "integrity" "sha512-5aurfP1roxbC5YwjAL7L5bgf8JF/zWSqfU0rJ4HCfAIrMQpWQCFZWNKiQCEwsDHefzT10jY50gHyEi3s3sty2w=="
+  "resolved" "https://registry.npmjs.org/@volvo-cars/react-descendants/-/react-descendants-0.5.0.tgz"
+  "version" "0.5.0"
+  dependencies:
+    "@volvo-cars/react-layout-utils" "^0.6.0"
+
+"@volvo-cars/react-layout-utils@^0.6.0":
+  "integrity" "sha512-CnANmKCh6GOlfIixr+iN8SWzBRKEZnS705ktULoqzkfS7haf8gPgT65k9FyUN1IK+nVODTFkqW7RBuH3ilhugg=="
+  "resolved" "https://registry.npmjs.org/@volvo-cars/react-layout-utils/-/react-layout-utils-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "@volvo-cars/react-utils" "^1.0.0"
+    "lodash" "^4.17.21"
+    "use-resize-observer" "^9.0.0"
+
+"@volvo-cars/react-utils@^1.0.0":
+  "integrity" "sha512-a8++jLFB94x7Ex3HKlPZB14MlWARMWfISYdtKetaknWJ5ql55qz/s0Z3Rg0CRzlPh9kJd1yEimiDzYxdg2pHsQ=="
+  "resolved" "https://registry.npmjs.org/@volvo-cars/react-utils/-/react-utils-1.0.0.tgz"
+  "version" "1.0.0"
+
+"@volvo-cars/ui-design-tokens@^2.14.1":
+  "integrity" "sha512-Alni5uf1BbeVOp//6htKVsI9s12y84ocjiN/QVINe+qgxnJzLZgX/sChFNv/K603svpbc00vIS7/BDE4aWl49Q=="
+  "resolved" "https://registry.npmjs.org/@volvo-cars/ui-design-tokens/-/ui-design-tokens-2.14.1.tgz"
+  "version" "2.14.1"
 
 "acorn-jsx@^5.3.2":
   "integrity" "sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ=="
@@ -1217,7 +1262,14 @@
     "shebang-command" "^2.0.0"
     "which" "^2.0.1"
 
-"csstype@^3.0.2":
+"css-in-js-utils@^3.0.0", "css-in-js-utils@^3.0.4", "css-in-js-utils@^3.1.0":
+  "integrity" "sha512-fJAcud6B3rRu+KHYk+Bwf+WFL2MDCJJ1XG9x137tJQ0xYxor7XziQtuGFbWNdqrvF4Tk26O3H73nfVqXt/fW1A=="
+  "resolved" "https://registry.npmjs.org/css-in-js-utils/-/css-in-js-utils-3.1.0.tgz"
+  "version" "3.1.0"
+  dependencies:
+    "hyphenate-style-name" "^1.0.3"
+
+"csstype@^3.0.2", "csstype@^3.0.5", "csstype@^3.0.6":
   "integrity" "sha512-rpw6JPxK6Rfg1zLOYCSwle2GFOOsnjmDYDaBwEcwoOg4qlsIVCN789VkBZDJAGi4T07gI4YSutR43t9Zz4Lzuw=="
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.0.9.tgz"
   "version" "3.0.9"
@@ -1668,6 +1720,11 @@
   "resolved" "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   "version" "2.0.6"
 
+"fast-loops@^1.0.0", "fast-loops@^1.0.1", "fast-loops@^1.1.3":
+  "integrity" "sha512-8EZzEP0eKkEEVX+drtd9mtuQ+/QrlfW/5MlwcwK5Nds6EkZ/tRzEexkzUY2mIssnAyVLT+TKHuRXmFNNXYUd6g=="
+  "resolved" "https://registry.npmjs.org/fast-loops/-/fast-loops-1.1.3.tgz"
+  "version" "1.1.3"
+
 "fastq@^1.6.0":
   "integrity" "sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw=="
   "resolved" "https://registry.npmjs.org/fastq/-/fastq-1.13.0.tgz"
@@ -1681,6 +1738,158 @@
   "version" "2.0.1"
   dependencies:
     "bser" "2.1.1"
+
+"fela-bindings@^12.2.0":
+  "integrity" "sha512-aSUdgTcME5I9doqX/017FdQQRnoIWKGZDmaQqHPHAp14QBMbppC3cC79vHeFOHwnH7DcxnnFv7DSeCl77g40ug=="
+  "resolved" "https://registry.npmjs.org/fela-bindings/-/fela-bindings-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "fast-loops" "^1.0.0"
+    "fela-dom" "^12.2.0"
+    "fela-tools" "^12.2.0"
+    "react-addons-shallow-compare" "^15.6.3"
+    "shallow-equal" "^1.0.0"
+
+"fela-dom@^12.2.0":
+  "integrity" "sha512-wPIIL2rSyGqR8JxIBiARnOT5nx4UlDeJjYWzVTOntTogBiUne3KNjJtJlAhwtujjAQmbzT1VFNGoD3G8d45evg=="
+  "resolved" "https://registry.npmjs.org/fela-dom/-/fela-dom-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "fast-loops" "^1.0.1"
+    "fela-utils" "^12.2.0"
+    "sort-css-media-queries" "^1.4.3"
+
+"fela-enforce-longhands@^12.2.0":
+  "integrity" "sha512-Tl1v3kUsfWpRjoisrgoitesjZFiIQIyCEGQ/J+SGHkeQ7AxrP9LSH2T7V/KarLV7s0+OBzyTqa1Qa29rzUJN3Q=="
+  "resolved" "https://registry.npmjs.org/fela-enforce-longhands/-/fela-enforce-longhands-12.2.0.tgz"
+  "version" "12.2.0"
+
+"fela-plugin-embedded@^12.2.0":
+  "integrity" "sha512-ZDSnyW8hdxhx3KhmBapyzjdwGhZ8s8CwYiNrxP7gRbEnzug3BB5a/qZjbBRMtvoG275kSK0YsfoDR97tG5W+Sw=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-embedded/-/fela-plugin-embedded-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "fast-loops" "^1.0.0"
+    "isobject" "^3.0.1"
+
+"fela-plugin-extend@^12.2.0":
+  "integrity" "sha512-yOkdCFMnhmZ/hoKYlXayKTtXbgVxzm4YLO1Gb01NbiGmlJOVv8WgsRyW9GWlNz6QUtEBNZTMEAzuallQhJ8dgQ=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-extend/-/fela-plugin-extend-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "fast-loops" "^1.0.0"
+    "fela-utils" "^12.2.0"
+    "isobject" "^3.0.1"
+
+"fela-plugin-fallback-value@^12.2.0":
+  "integrity" "sha512-mUjryPBRFBuEEM/H1MO4r8rtcJM4lKiMqGECpohymZUMjS6t9560WwHwKedazdnseb/GqPjD9U0ft41vvyDqYg=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-fallback-value/-/fela-plugin-fallback-value-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "isobject" "^4.0.0"
+
+"fela-plugin-hover-media@^12.2.0":
+  "integrity" "sha512-AEKWsPDLF2UF6FEITQFk2zuzXCkVVC+wBr7DQV586cmvVR3w/N7RqnYTgwi58XaH8Cwx0Yo1raX0+yT02vPCBQ=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-hover-media/-/fela-plugin-hover-media-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.1.0"
+    "fast-loops" "^1.1.3"
+    "isobject" "^3.0.1"
+
+"fela-plugin-named-keys@^12.2.0":
+  "integrity" "sha512-zbrVX/yeWUn+P0vnnD0Qd3z931r03DDJN89sJBFiD6+HctJcsxpCTGfykay2EpCzCU6bsTPKdnshD+pWWUoodA=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-named-keys/-/fela-plugin-named-keys-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "isobject" "^3.0.1"
+
+"fela-plugin-prefixer@^12.2.0":
+  "integrity" "sha512-gs05WgHDUcvGRTBeWkc5p3tmlSa6kIq8OKD6iKdm+KddCYNRqZKvqGDBuMxpN+8mcWkKvjJxnOh3iY+qBF0DAQ=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-prefixer/-/fela-plugin-prefixer-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.1.0"
+    "fast-loops" "^1.1.3"
+    "isobject" "^4.0.0"
+    "stylis" "^4.0.13"
+
+"fela-plugin-responsive-value@^12.2.0":
+  "integrity" "sha512-861UlMwyQM0ax5pb7oCV7oURwdJTxBcK6WY7V0rcKKFs9RUegs7kHHWK1vu4nU34qmsQ1rF2dQ8fC14WHQGj+A=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-responsive-value/-/fela-plugin-responsive-value-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "fast-loops" "^1.0.0"
+    "isobject" "^3.0.1"
+
+"fela-plugin-rtl@^12.2.0":
+  "integrity" "sha512-AxDADtKj6hwNSp2oTTAxWEoNKiVnVuMIWLdmZN7UI75PXAcd8CavqE6P+UnWMQf39gtXMZ30BvLUFW88wJ0mnQ=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-rtl/-/fela-plugin-rtl-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "rtl-css-js" "^1.1.3"
+
+"fela-plugin-theme-value@^12.2.0":
+  "integrity" "sha512-dplWJkhPrbnqo5lCLbMH0FB6zhOBI/kD8fUNInW0lym+gV3Ndl/LNVL5Paa2aPt8ZJo/WkjKWsbSa4Qz0CO3hA=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-theme-value/-/fela-plugin-theme-value-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "fast-loops" "^1.1.3"
+    "isobject" "^3.0.1"
+
+"fela-plugin-unit@^12.2.0":
+  "integrity" "sha512-2qiyGcDSCVamP/igBNvB/Tk87eSWMRqYK8h6RdnpwNFd4A8NQx0gdsR38OiTk0EU48JoADQWwWR27vFnxegVmg=="
+  "resolved" "https://registry.npmjs.org/fela-plugin-unit/-/fela-plugin-unit-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "isobject" "^4.0.0"
+
+"fela-sort-classnames@^12.2.0":
+  "integrity" "sha512-5n30ScHJ9eNRfLTCJkgjpBvXkhKfqcdwArT4/pSJo4UR7/Telo7qAtxK0IY8/qh/GGl6zVRoVzyOjInvb12fAA=="
+  "resolved" "https://registry.npmjs.org/fela-sort-classnames/-/fela-sort-classnames-12.2.0.tgz"
+  "version" "12.2.0"
+
+"fela-sort-media-query-mobile-first@^12.2.0":
+  "integrity" "sha512-3vXwPmPyjZPiQzoHRDlinqAlaC6JU8XQWtX1CzWRycPTtWSXbSdjem2eutGVIYOAlRpsTgMhFyhGXUaj7BBl+g=="
+  "resolved" "https://registry.npmjs.org/fela-sort-media-query-mobile-first/-/fela-sort-media-query-mobile-first-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "sort-css-media-queries" "^1.4.3"
+
+"fela-tools@^12.2.0":
+  "integrity" "sha512-mba2xQUyNfJBwHeMW39W6z73Yytf6PNHXwApj7Z69Pdc1/imA7xHUs3zQnFMZ33fd7K0c1TaBGhmaiDjOkBzlA=="
+  "resolved" "https://registry.npmjs.org/fela-tools/-/fela-tools-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "fast-loops" "^1.0.0"
+    "fela" "^12.2.0"
+    "fela-utils" "^12.2.0"
+
+"fela-utils@^12.2.0":
+  "integrity" "sha512-lGscG9H1QAfD7614sNBEcJlTVvD8CusX4QAkWPFaEzhwc7FMW6arDFlMTdSvasrQir8bLmKdlXdPgUnYaDnt7w=="
+  "resolved" "https://registry.npmjs.org/fela-utils/-/fela-utils-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "fast-loops" "^1.0.0"
+
+"fela@*", "fela@^12.2.0", "fela@>=11", "fela@>=11.3":
+  "integrity" "sha512-iwa09Zjm052C2DSVNtVclrmYIXVmaSlU2UWT3AVDvxZJ5OFRI88pgFczr5z0Lkq2SLC6xxCxIO3uHcG1WqI9Qg=="
+  "resolved" "https://registry.npmjs.org/fela/-/fela-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "css-in-js-utils" "^3.0.0"
+    "csstype" "^3.0.5"
+    "fast-loops" "^1.0.0"
+    "fela-utils" "^12.2.0"
+    "isobject" "^3.0.1"
 
 "file-entry-cache@^6.0.1":
   "integrity" "sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg=="
@@ -1918,6 +2127,11 @@
   dependencies:
     "function-bind" "^1.1.1"
 
+"hex-to-rgba@^2.0.0":
+  "integrity" "sha512-5XqPJBpsEUMsseJUi2w2Hl7cHFFi3+OO10M2pzAvKB1zL6fc+koGMhmBqoDOCB4GemiRM/zvDMRIhVw6EkB8dQ=="
+  "resolved" "https://registry.npmjs.org/hex-to-rgba/-/hex-to-rgba-2.0.1.tgz"
+  "version" "2.0.1"
+
 "html-escaper@^2.0.0":
   "integrity" "sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg=="
   "resolved" "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.2.tgz"
@@ -1927,6 +2141,11 @@
   "integrity" "sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw=="
   "resolved" "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   "version" "2.1.0"
+
+"hyphenate-style-name@^1.0.3":
+  "integrity" "sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ=="
+  "resolved" "https://registry.npmjs.org/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz"
+  "version" "1.0.4"
 
 "ignore@^5.2.0":
   "integrity" "sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ=="
@@ -2099,6 +2318,16 @@
   "integrity" "sha1-6PvzdNxVb/iUehDcsFctYz8s+hA= sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw=="
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
+
+"isobject@^3.0.1":
+  "integrity" "sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg=="
+  "resolved" "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
+  "version" "3.0.1"
+
+"isobject@^4.0.0":
+  "integrity" "sha512-S/2fF5wH8SJA/kmwr6HYhK/RI/OkhD84k8ntalo0iJjZikgq1XFvR5M8NPT1x5F7fBwCG3qHfnzeP/Vh/ZxCUA=="
+  "resolved" "https://registry.npmjs.org/isobject/-/isobject-4.0.0.tgz"
+  "version" "4.0.0"
 
 "istanbul-lib-coverage@^3.0.0", "istanbul-lib-coverage@^3.2.0":
   "integrity" "sha512-eOeJ5BHCmHYvQK7xt9GkdHuzuCGS1Y6g9Gvnx3Ym33fz/HpLRYxiS0wHNr+m/MBC8B647Xt608vCDEvhl9c6Mw=="
@@ -2614,6 +2843,11 @@
   "resolved" "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   "version" "4.6.2"
 
+"lodash@^4.17.21":
+  "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+  "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  "version" "4.17.21"
+
 "loose-envify@^1.1.0", "loose-envify@^1.4.0":
   "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
@@ -2750,7 +2984,7 @@
   dependencies:
     "path-key" "^3.0.0"
 
-"object-assign@^4.1.1":
+"object-assign@^4.1.0", "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
   "version" "4.1.1"
@@ -2975,7 +3209,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.8.1":
+"prop-types@^15.5.8", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -2994,7 +3228,14 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@*", "react-dom@^17.0.0", "react-dom@^17.0.2 || ^18.0.0-0":
+"react-addons-shallow-compare@^15.6.3":
+  "integrity" "sha512-EDJbgKTtGRLhr3wiGDXK/+AEJ59yqGS+tKE6mue0aNXT6ZMR7VJbbzIiT6akotmHg1BLj46ElJSb+NBMp80XBg=="
+  "resolved" "https://registry.npmjs.org/react-addons-shallow-compare/-/react-addons-shallow-compare-15.6.3.tgz"
+  "version" "15.6.3"
+  dependencies:
+    "object-assign" "^4.1.0"
+
+"react-dom@*", "react-dom@^17.0.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@16.8.0 - 18":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -3002,6 +3243,15 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
+
+"react-fela@^12.2.0":
+  "integrity" "sha512-bAe7ve5vnRPfDi7Nsba1vQU4q2VtZWFapTze+qCVxV01XmsMcNdsOoyEVYJkoBJNGw+xLTpEb74asvz9tHhPWw=="
+  "resolved" "https://registry.npmjs.org/react-fela/-/react-fela-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "fela-bindings" "^12.2.0"
+    "fela-dom" "^12.2.0"
+    "prop-types" "^15.5.8"
 
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
@@ -3018,7 +3268,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
   "version" "18.2.0"
 
-"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@17.0.2":
+"react@*", "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@16.8.0 - 18", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -3109,6 +3359,13 @@
   dependencies:
     "glob" "^7.1.3"
 
+"rtl-css-js@^1.1.3":
+  "integrity" "sha512-Oc7PnzwIEU4M0K1J4h/7qUUaljXhQ0kCObRsZjxs2HjkpKsnoTMvSmvJ4sqgJZd0zBoEfAyTdnK/jMIYvrjySQ=="
+  "resolved" "https://registry.npmjs.org/rtl-css-js/-/rtl-css-js-1.16.0.tgz"
+  "version" "1.16.0"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+
 "run-parallel@^1.1.9":
   "integrity" "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA=="
   "resolved" "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz"
@@ -3146,6 +3403,11 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+"shallow-equal@^1.0.0":
+  "integrity" "sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA=="
+  "resolved" "https://registry.npmjs.org/shallow-equal/-/shallow-equal-1.2.1.tgz"
+  "version" "1.2.1"
+
 "shebang-command@^2.0.0":
   "integrity" "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="
   "resolved" "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz"
@@ -3181,6 +3443,11 @@
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
   "resolved" "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   "version" "3.0.0"
+
+"sort-css-media-queries@^1.4.3":
+  "integrity" "sha512-YP5W/h4Sid/YP7Lp87ejJ5jP13/Mtqt2vx33XyhO+IAugKlufRPbOrPlIiEUuxmpNBSBd3EeeQpFhdu3RfI2Ag=="
+  "resolved" "https://registry.npmjs.org/sort-css-media-queries/-/sort-css-media-queries-1.5.4.tgz"
+  "version" "1.5.4"
 
 "source-map-js@^1.0.2":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
@@ -3292,6 +3559,11 @@
   "integrity" "sha512-sDFWLbg4zR+UkNzfk5lPilyIgtpddfxXEULxhujorr5jtePTUqiPDc5BC0v1NRqTr/WaFBGQQUoYToGlF4B2KQ=="
   "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.4.tgz"
   "version" "5.0.4"
+
+"stylis@^4.0.13":
+  "integrity" "sha512-Nn2CCrG2ZaFziDxaZPN43CXqn+j7tcdjPFCkRBkFue8QYXC2HdEwnw5TCBo4yQZ2WxKYeSi0fdoOrtEqgDrXbA=="
+  "resolved" "https://registry.npmjs.org/stylis/-/stylis-4.1.2.tgz"
+  "version" "4.1.2"
 
 "supports-color@^5.3.0":
   "integrity" "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow=="
@@ -3445,6 +3717,13 @@
   dependencies:
     "punycode" "^2.1.0"
 
+"use-resize-observer@^9.0.0":
+  "integrity" "sha512-JOzsmF3/IDmtjG7OE5qXOP69LEpBpwhpLSiT1XgSr+uFRX0ftJHQnDaP7Xq+uhbljLYkJt67sqsbnyXBjiY8ig=="
+  "resolved" "https://registry.npmjs.org/use-resize-observer/-/use-resize-observer-9.0.2.tgz"
+  "version" "9.0.2"
+  dependencies:
+    "@juggle/resize-observer" "^3.3.1"
+
 "use-sync-external-store@1.2.0":
   "integrity" "sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA=="
   "resolved" "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
@@ -3463,6 +3742,36 @@
     "@jridgewell/trace-mapping" "^0.3.12"
     "@types/istanbul-lib-coverage" "^2.0.1"
     "convert-source-map" "^1.6.0"
+
+"vcc-ui@^3.3.1":
+  "integrity" "sha512-8x28YIYn+9fqJdN1qlZB3sq29kJM2dogzAVeoxRMbcuDL1dH71PxrfD04lLPbh4x9+6kM7Pdyfnv9pbvz9iMmw=="
+  "resolved" "https://registry.npmjs.org/vcc-ui/-/vcc-ui-3.3.1.tgz"
+  "version" "3.3.1"
+  dependencies:
+    "@babel/runtime" "^7.17.0"
+    "@volvo-cars/react-aria" "^0.3.0"
+    "@volvo-cars/ui-design-tokens" "^2.14.1"
+    "css-in-js-utils" "^3.0.4"
+    "csstype" "^3.0.6"
+    "fast-loops" "^1.1.3"
+    "fela" "^12.2.0"
+    "fela-dom" "^12.2.0"
+    "fela-enforce-longhands" "^12.2.0"
+    "fela-plugin-embedded" "^12.2.0"
+    "fela-plugin-extend" "^12.2.0"
+    "fela-plugin-fallback-value" "^12.2.0"
+    "fela-plugin-hover-media" "^12.2.0"
+    "fela-plugin-named-keys" "^12.2.0"
+    "fela-plugin-prefixer" "^12.2.0"
+    "fela-plugin-responsive-value" "^12.2.0"
+    "fela-plugin-rtl" "^12.2.0"
+    "fela-plugin-theme-value" "^12.2.0"
+    "fela-plugin-unit" "^12.2.0"
+    "fela-sort-classnames" "^12.2.0"
+    "fela-sort-media-query-mobile-first" "^12.2.0"
+    "fela-tools" "^12.2.0"
+    "hex-to-rgba" "^2.0.0"
+    "react-fela" "^12.2.0"
 
 "walker@^1.0.8":
   "integrity" "sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ=="
