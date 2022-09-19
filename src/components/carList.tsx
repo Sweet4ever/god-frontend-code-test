@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Flex, Block, Icon, Click } from "vcc-ui";
 import { Car } from "./Car";
 import data from "../../public/api/cars.json";
@@ -6,26 +6,39 @@ import CarInterface from "../Interfaces/CarInterface";
 
 export const CarList: React.FC = () => {
   const newData: CarInterface[] = [...data];
-  let carChunks: CarInterface[][] = [];
-  let chunk: CarInterface[] = [];
+  let [chunk, setChunk] = useState<CarInterface[]>([]);
   let [slide, setSlide] = useState(0);
 
-  for (let i = 0; i < newData.length; i++) {
-    chunk.push(newData[i]);
-    if (chunk.length === 4) {
-      carChunks.push(chunk);
-      chunk = [];
+  useEffect(() => {
+    updateSlider();
+  }, [slide]);
+
+  const updateSlider = () => {
+    let newChunk: any[] = [];
+    newChunk.push(newData[undefChecker(newData, slide)]);
+    newChunk.push(newData[undefChecker(newData, slide + 1)]);
+    newChunk.push(newData[undefChecker(newData, slide + 2)]);
+    newChunk.push(newData[undefChecker(newData, slide + 3)]);
+    setChunk(newChunk);
+  };
+
+  const undefChecker = (array: any[], i: number) => {
+    if (array[i] === undefined) {
+      return i - array.length;
+    } else {
+      return i;
     }
-  }
+  };
+
   const prevPage = () => {
     if (slide - 1 < 0) {
-      setSlide(carChunks.length - 1);
+      setSlide(newData.length - 1);
     } else {
       setSlide(slide - 1);
     }
   };
   const nextPage = () => {
-    if (slide + 1 >= carChunks.length) {
+    if (slide + 1 >= newData.length) {
       setSlide(0);
     } else {
       setSlide(slide + 1);
@@ -34,7 +47,6 @@ export const CarList: React.FC = () => {
 
   return (
     <Flex
-      id="1"
       extend={{
         "flex-direction": "column",
         "align-items": "center",
@@ -42,7 +54,6 @@ export const CarList: React.FC = () => {
       }}
     >
       <Block
-        id="2"
         extend={{
           display: "flex",
           "flex-direction": "column",
@@ -51,25 +62,23 @@ export const CarList: React.FC = () => {
         }}
       >
         <Flex
-          id="3"
           extend={{
             height: "500px",
-            "flex-wrap": "wrap",
             "flex-direction": "row",
             "justify-content": "center",
-            overflow: "hidden",
           }}
         >
-          {carChunks[slide].map((data) => {
+          {chunk.map((data: CarInterface) => {
             return <Car car={data} key={data.id}></Car>;
           })}
         </Flex>
         <Flex
-          id="4"
           extend={{
             "flex-direction": "row",
             "justify-content": "flex-end",
             paddingRight: "58.5px",
+            display: "none",
+            fromL: { display: "flex" },
           }}
         >
           <Click onClick={prevPage}>

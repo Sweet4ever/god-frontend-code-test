@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Block, Link } from "vcc-ui";
 import CarInterface from "../Interfaces/CarInterface";
 import Image from "next/image";
 
 export const Car: React.FC<{ car: CarInterface }> = ({ car }) => {
-  useEffect(() => {});
-
   return (
     <Block
       extend={{
