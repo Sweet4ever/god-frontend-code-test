@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Block, Link } from "vcc-ui";
 import CarInterface from "../Interfaces/CarInterface";
 import Image from "next/image";
 
 export const Car: React.FC<{ car: CarInterface }> = ({ car }) => {
+  useEffect(() => {});
+
   return (
     <Block
       extend={{
@@ -36,11 +38,11 @@ export const Car: React.FC<{ car: CarInterface }> = ({ car }) => {
             "align-items": "center",
           }}
         >
-          <Link href="https://www.volvocars.com/" arrow="right">
+          <Link href={`/learn/${car.id}`} arrow="right">
             LEARN
           </Link>
         </Block>
-        <Link href="https://www.volvocars.com/" arrow="right">
+        <Link href={`/shop/${car.id}`} arrow="right">
           SHOP
         </Link>
       </Block>
