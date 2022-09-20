@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Block, Icon, Click } from "vcc-ui";
+import { Flex, Block, Icon, Click, SelectInput } from "vcc-ui";
 import { Car } from "./Car";
 import data from "../../public/api/cars.json";
 import CarInterface from "../Interfaces/CarInterface";
@@ -8,26 +8,49 @@ export const CarList: React.FC = () => {
   const newData: CarInterface[] = [...data];
   let [chunk, setChunk] = useState<CarInterface[]>([]);
   let [slide, setSlide] = useState(0);
+  let [bodyType, setBodyType] = useState("");
+  let bodyTypes = Array.from(
+    new Set(newData.map((item: CarInterface) => item.bodyType))
+  );
 
   useEffect(() => {
-    updateSlider();
-  }, [slide]);
+    updateSlider(bodyType);
+  }, [slide, bodyType]);
 
-  const updateSlider = () => {
+  const updateSlider = (bodyType: string) => {
     let newChunk: any[] = [];
-    newChunk.push(newData[undefChecker(newData, slide)]);
-    newChunk.push(newData[undefChecker(newData, slide + 1)]);
-    newChunk.push(newData[undefChecker(newData, slide + 2)]);
-    newChunk.push(newData[undefChecker(newData, slide + 3)]);
+    let filteredList = newData.filter((car) => {
+      if (car.bodyType === bodyType) {
+        return car;
+      }
+    });
+    if (filteredList.length > 0) {
+      for (let i = 0; i < filteredList.length; i++) {
+        if (undefChecker(filteredList, i)) {
+          if (newChunk.length < filteredList.length) {
+            newChunk.push(filteredList[i]);
+          } else {
+            newChunk.push(filteredList[i - filteredList.length]);
+          }
+        }
+      }
+    } else {
+      for (let i = slide; i < slide + 4; i++) {
+        if (undefChecker(newData, i)) {
+          newChunk.push(newData[i]);
+        } else {
+          newChunk.push(newData[i - newData.length]);
+        }
+      }
+    }
     setChunk(newChunk);
   };
 
   const undefChecker = (array: any[], i: number) => {
-    if (array[i] === undefined) {
-      return i - array.length;
-    } else {
-      return i;
+    if (array?.[i]) {
+      return true;
     }
+    return false;
   };
 
   const prevPage = () => {
@@ -53,6 +76,23 @@ export const CarList: React.FC = () => {
 
   return (
     <>
+      <Flex extend={{ width: "10vw" }}>
+        <SelectInput
+          label={"Body Type"}
+          value={bodyType}
+          onChange={(e) => {
+            setBodyType(e.target.value);
+          }}
+        >
+          {bodyTypes.map((type: string, index: number) => {
+            return (
+              <option value={type} key={index}>
+                {type}
+              </option>
+            );
+          })}
+        </SelectInput>
+      </Flex>
       <Flex
         extend={{
           "flex-direction": "column",
@@ -77,8 +117,8 @@ export const CarList: React.FC = () => {
               "justify-content": "center",
             }}
           >
-            {chunk.map((data: CarInterface) => {
-              return <Car car={data} key={data.id}></Car>;
+            {chunk.map((data: CarInterface, index: number) => {
+              return <Car car={data} key={index}></Car>;
             })}
           </Flex>
           <Flex
