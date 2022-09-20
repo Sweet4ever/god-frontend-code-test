@@ -1,5 +1,5 @@
 import React from "react";
-import { Block, Link } from "vcc-ui";
+import { Block, Link, Text } from "vcc-ui";
 import CarInterface from "../Interfaces/CarInterface";
 import Image from "next/image";
 
@@ -9,12 +9,18 @@ export const Car: React.FC<{ car: CarInterface }> = ({ car }) => {
       extend={{
         margin: "1vw",
         width: "280px",
-        height: "500px",
+        height: "400px",
       }}
     >
-      <h2>{car.bodyType}</h2>
-      <h1>{car.modelName}</h1>
-      <h2>{car.modelType}</h2>
+      <Text extend={{ color: "grey" }} variant={"bates"}>
+        {car.bodyType.toUpperCase()}
+      </Text>
+      <Text variant={"hillary"} subStyle={"emphasis"}>
+        {car.modelName}
+      </Text>
+      <Text extend={{ color: "grey" }} variant={"bates"}>
+        {car.modelType}
+      </Text>
       <Image
         src={car.imageUrl}
         alt={car.id}

@@ -44,51 +44,100 @@ export const CarList: React.FC = () => {
       setSlide(slide + 1);
     }
   };
+  const handleClick = (id: string) => {
+    let newId = newData.findIndex((obj) => {
+      return obj.id === id;
+    });
+    setSlide(newId);
+  };
 
   return (
-    <Flex
-      extend={{
-        "flex-direction": "column",
-        "align-items": "center",
-        "align-self": "auto",
-      }}
-    >
-      <Block
+    <>
+      <Flex
         extend={{
-          display: "flex",
           "flex-direction": "column",
-          "justify-content": "center",
-          width: "80vw",
+          "align-items": "center",
+          "align-self": "auto",
+          display: "none",
+          fromL: { display: "flex" },
         }}
       >
+        <Block
+          extend={{
+            display: "flex",
+            "flex-direction": "column",
+            "justify-content": "center",
+            width: "80vw",
+          }}
+        >
+          <Flex
+            extend={{
+              height: "400px",
+              "flex-direction": "row",
+              "justify-content": "center",
+            }}
+          >
+            {chunk.map((data: CarInterface) => {
+              return <Car car={data} key={data.id}></Car>;
+            })}
+          </Flex>
+          <Flex
+            extend={{
+              "flex-direction": "row",
+              "justify-content": "flex-end",
+              width: "80vw",
+            }}
+          >
+            <Click onClick={prevPage}>
+              <Icon type="mediacircled-previous-32" />
+            </Click>
+            <Click onClick={nextPage}>
+              <Icon type="mediacircled-next-32" />
+            </Click>
+          </Flex>
+        </Block>
+      </Flex>
+      <Flex extend={{ "justify-content": "center" }}>
         <Flex
           extend={{
-            height: "500px",
+            width: "80vw",
+            display: "flex",
+            "justify-content": "center",
+            "flex-direction": "row",
+            overflow: "hidden",
+            fromL: { display: " none" },
+          }}
+        >
+          {<Car car={newData[slide]} key={newData[slide].id}></Car>}
+        </Flex>
+        <Flex
+          extend={{
+            width: "80vw",
             "flex-direction": "row",
             "justify-content": "center",
+            fromL: { display: " none" },
           }}
         >
-          {chunk.map((data: CarInterface) => {
-            return <Car car={data} key={data.id}></Car>;
+          {newData.map((data) => {
+            return (
+              <Click
+                onClick={() => {
+                  handleClick(data.id);
+                }}
+                key={data.id}
+              >
+                <label htmlFor={data.id}></label>
+                <input
+                  type="radio"
+                  id={data.id}
+                  name="cars"
+                  checked={newData[slide].id === data.id ? true : false}
+                ></input>
+              </Click>
+            );
           })}
         </Flex>
-        <Flex
-          extend={{
-            "flex-direction": "row",
-            "justify-content": "flex-end",
-            paddingRight: "58.5px",
-            display: "none",
-            fromL: { display: "flex" },
-          }}
-        >
-          <Click onClick={prevPage}>
-            <Icon type="mediacircled-previous-32" />
-          </Click>
-          <Click onClick={nextPage}>
-            <Icon type="mediacircled-next-32" />
-          </Click>
-        </Flex>
-      </Block>
-    </Flex>
+      </Flex>
+    </>
   );
 };
